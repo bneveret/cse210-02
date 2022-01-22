@@ -31,3 +31,6 @@ The project files and folders are organized as follows:
 ## Authors
 ---
 * Sawyer Stakkeland
+* Abel Larcom
+* Hugette Nsamba
+* Wylee Everett
