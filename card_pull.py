@@ -2,9 +2,7 @@ import random
 
 class Card:
  # 1) Add the class declaration. 
-    """A small cube with a different number of spots on each of its six sides.
-
-    The responsibility of the class Card is to keep track of the guesses input by the user and calculate the points.
+    """The responsibility of class Card is to keep track of the guesses input by the user and calculate the points.
    
     Attributes:
         value (int): Represent the random card.
@@ -17,13 +15,13 @@ class Card:
         """Constructs a new instance of card with a value and points attribute.
 
         Args:
-            self (Card): An instance of the card.
+            self (Card): An instance of card.
         """
         self.value = 0
         self.points = 300
         
     def card(self):
-        """ card Generates a new random card from 1 to 13. and calculates the points. The number represents a card."""
+        """ card Generates a new random card from 1 to 13. and calculates the points. The number represent a card."""
         
         self.current_card = random.randint(1, 13)
         
@@ -34,7 +32,7 @@ class Card:
         return self.user_guess
             
     def guess_low(self):
-        """ if user's guesses are correct, then 100 points are won, Otherwise they lose 75 points"""
+        """ if user's guesses is correct, than 100 point are won, Otherwise, they lose 75 points"""
         if self.user_guess.lower() == "lower" or self.user_guess.lower() == "l":
             self.current_card < self.next_card
             score = self.points + 100
@@ -44,7 +42,7 @@ class Card:
             return score
 
     def guess_high(self):
-        """if user's guesses are higher, meaning if the user's guesses are correct, 100 points are won. Otherwise, they lose 75 points."""
+        """if user's guesses is higher, meant if user's guesses is correct, 100 points are won. Otherwise they lose 75 points."""
         if self.user_guess.lower() == "higher" or self.user_guess.lower() == "h":
             self.current_card > self.next_card
             score = self.points + 100
