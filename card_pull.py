@@ -18,17 +18,19 @@ class Card:
         """
         self.value = 0
         self.points = 300
+
+    #dont need this either as its in director.py    
+    #def card(self):
+        #""" card Generates a new random card from 1 to 13. and calculates the points. The number represent a card."""
         
-    def card(self):
-        """ card Generates a new random card from 1 to 13. and calculates the points. The number represent a card."""
+        #self.current_card = random.randint(1, 13)
         
-        self.current_card = random.randint(1, 13)
-        
-        return self.current_card
+        #return self.current_card
     
-    def get_user_input(self):
-        self.user_guess = input("higher or lower,[h/l]? ")
-        return self.user_guess
+    #Dont think we need this its in director.py
+    #def get_user_input(self):
+        #self.user_guess = input("higher or lower,[h/l]? ")
+        #return self.user_guess
             
     def guess_low(self):
         """ if user's guesses is correct, than 100 point are won, Otherwise, they lose 75 points"""
