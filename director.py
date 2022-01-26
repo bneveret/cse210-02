@@ -7,7 +7,7 @@ class Director:
         self.current_card = [random.randint(1, 13)]
         self.is_playing = True
         self.score = 0
-        self.total_score = 300
+        self.total_score = 0
 
         cards = Card()
         self.current_card.append(cards)
@@ -15,6 +15,7 @@ class Director:
     def start_game(self):
         while self.is_playing:
             self.get_inputs(Card())
+            self.__init__()
             self.do_updates()
             self.do_outputs()
 
@@ -23,7 +24,7 @@ class Director:
         self.is_playing = (draw_card == "y")
         cards.get_user_input()
 
-    def do_updates(self, cards):
+    def do_updates(self):
         if not self.is_playing:
             return 
         
@@ -33,10 +34,10 @@ class Director:
     def do_outputs(self):
         if not self.is_playing:
             return
-        value=""
-        cards = self.current_card[0]
-        value += f"{cards.value} "
+        #value=""
+        cards = self.current_card
+        #value += (f"{cards.value} ")
 
-        print(f"You rolled a {value}")
+        print(f"You got a {cards}")
         print(f"Your score is: {self.total_score}\n")
         self.is_playing == (self.score > 0)
