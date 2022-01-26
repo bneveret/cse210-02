@@ -1,5 +1,4 @@
 import random
-
 class Card:
  # 1) Add the class declaration. 
     """The responsibility of class Card is to keep track of the guesses input by the user and calculate the points.

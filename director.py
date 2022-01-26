@@ -14,7 +14,7 @@ class Director:
         
     def start_game(self):
         while self.is_playing:
-            self.get_inputs()
+            self.get_inputs(Card())
             self.do_updates()
             self.do_outputs()
 
