@@ -28,9 +28,12 @@ class Card:
         #return self.current_card
     
     #Dont think we need this its in director.py
-    #def get_user_input(self):
-        #self.user_guess = input("higher or lower,[h/l]? ")
-        #return self.user_guess
+    def get_user_input(self):
+        self.user_guess = ""
+        self.user_guess = input("Higher or lower? [h/l] ").lower()
+        while self.user_guess != "h" and self.user_guess != "l":
+            print("\nPlease Type h for Higher or l for Lower")
+            self.user_guess = input("Higher or lower? [h/l] ").lower()
             
     def guess_low(self):
         """ if user's guesses is correct, than 100 point are won, Otherwise, they lose 75 points"""
